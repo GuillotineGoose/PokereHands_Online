@@ -2,7 +2,6 @@ package Card;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Stack;
 
 public class Deck {
 
@@ -38,7 +37,7 @@ public class Deck {
         return deck.toString();
     }
 
-    public ArrayList<Card> getDeck() {
-        return deck;
+    public int size(){
+        return deck.size();
     }
 }

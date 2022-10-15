@@ -2,8 +2,8 @@ package Card;
 
 public class Card {
     private Rank rank;
-    private char suit;
-    public Card(Rank rank, char suit) {
+    private Suit suit;
+    public Card(Rank rank, Suit suit) {
         this.suit = suit;
         this.rank = rank;
     }
@@ -12,7 +12,7 @@ public class Card {
         return rank.ordinal();
     }
 
-    public char getSuit() {
+    public Suit getSuit() {
         return suit;
     }
 }

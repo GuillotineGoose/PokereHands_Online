@@ -32,13 +32,15 @@ public class DeckTest {
     }
 
 
+    @Test void drawWholeDeck(){
+        deck.drawCard();
 
-    /*@Test void drawWholeDeck(){
+        assertEquals(0, deck.size());
 
     }
 
     @Test
     public void drawToManyCards(){
 
-    }*/
+    }
 }

@@ -27,7 +27,7 @@ public class Deck {
     //Creates the deck of cards and ads them to the stack.
     private void createDeck(){
             for (Rank rank: ranks){
-                for (char suit: suits){
+                for (Suit suit: suits){
                     deck.add(new Card(rank, suit));
                 }
             }

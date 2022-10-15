@@ -1,11 +1,12 @@
 package Card;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Stack;
 
 public class Deck {
 
-    private Stack<Card> deck =new Stack<>();
+    private ArrayList<Card> deck =new ArrayList<>();
 
     public Deck(){
         createDeck();
@@ -13,7 +14,9 @@ public class Deck {
     }
 
     public Card drawCard(){
-        return deck.pop();
+        var card = deck.get(0);
+        deck.remove(0);
+        return card;
     }
 
     public void shuffle(){

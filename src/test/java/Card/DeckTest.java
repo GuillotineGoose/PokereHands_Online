@@ -41,9 +41,11 @@ public class DeckTest {
 
     @Test
     public void drawToManyCards(){
-        var card = deck.drawCard();
+        for (int i = 0; i<54; i++) {
+            deck.drawCard();
+        }
 
-        assertEquals(null, card);
+        assertEquals(0, deck.size());
 
     }
 }

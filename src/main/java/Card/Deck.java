@@ -13,9 +13,13 @@ public class Deck {
     }
 
     public Card drawCard(){
+        if(deck.size() > 0){
         var card = deck.get(0);
         deck.remove(0);
         return card;
+        } else {
+            return null;
+        }
     }
 
     public void shuffle(){

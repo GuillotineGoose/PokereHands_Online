@@ -8,8 +8,8 @@ public class Card {
         this.rank = rank;
     }
 
-    public int getRank() {
-        return rank.ordinal();
+    public Rank getRank() {
+        return rank;
     }
 
     public Suit getSuit() {

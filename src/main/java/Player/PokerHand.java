@@ -21,7 +21,7 @@ public class PokerHand {
 
         for (var card : hand) {
             if (!handValues.containsKey(card.getRank())) {
-                handValues.put(card.getRank(), new ArrayList<>());
+                handValues.put(card.getRank().ordinal(), new ArrayList<>());
             }
 
             handValues.get(card.getRank()).add(card);

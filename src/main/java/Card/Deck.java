@@ -6,9 +6,6 @@ import java.util.Stack;
 public class Deck {
 
     private Stack<Card> deck =new Stack<>();
-    private Rank[] ranks = {Rank.TWO, Rank.THREE, Rank.FOUR, Rank.FIVE, Rank.SIX, Rank.SEVEN, Rank.EIGHT, Rank.NINE,
-            Rank.TEN, Rank.J, Rank.Q, Rank.K, Rank.A};
-    private Suit[] suits = {Suit.CLUBS, Suit.HEARTS, Suit.DIAMONDS, Suit.SPADES};
 
     public Deck(){
         createDeck();
@@ -26,10 +23,15 @@ public class Deck {
 
     //Creates the deck of cards and ads them to the stack.
     private void createDeck(){
-            for (Rank rank: ranks){
-                for (Suit suit: suits){
+            for (Rank rank: Rank.values()){
+                for (Suit suit: Suit.values()){
                     deck.add(new Card(rank, suit));
                 }
             }
         }
+
+    @Override
+    public String toString() {
+        return deck.toString();
+    }
 }

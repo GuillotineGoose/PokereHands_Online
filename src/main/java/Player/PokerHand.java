@@ -1,6 +1,6 @@
 package Player;
 
-import Card.Card;
+import Card.*;
 
 import java.util.*;
 import java.util.stream.IntStream;
@@ -212,7 +212,7 @@ public class PokerHand {
             isChecked = true;
         }
 
-        char suit = hand.get(0).getSuit();
+        Suit suit = hand.get(0).getSuit();
         for(int x= 0; x < hand.size() -1; x++){
             if (!(hand.get(x).getSuit() == hand.get(x+1).getSuit())){
                 return 0;

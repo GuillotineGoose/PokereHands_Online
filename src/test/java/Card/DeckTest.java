@@ -41,6 +41,9 @@ public class DeckTest {
 
     @Test
     public void drawToManyCards(){
+        var card = deck.drawCard();
+
+        assertEquals(null, card);
 
     }
 }

@@ -8,7 +8,7 @@ public class Deck {
     private Stack<Card> deck =new Stack<>();
     private Rank[] ranks = {Rank.TWO, Rank.THREE, Rank.FOUR, Rank.FIVE, Rank.SIX, Rank.SEVEN, Rank.EIGHT, Rank.NINE,
             Rank.TEN, Rank.J, Rank.Q, Rank.K, Rank.A};
-    private char[] suits = {'♥', '♦', '♠', '♣'};
+    private Suit[] suits = {Suit.CLUBS, Suit.HEARTS, Suit.DIAMONDS, Suit.SPADES};
 
     public Deck(){
         createDeck();

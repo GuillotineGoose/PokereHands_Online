@@ -33,7 +33,9 @@ public class DeckTest {
 
 
     @Test void drawWholeDeck(){
-        deck.drawCard();
+        while (!deck.getDeck().isEmpty()){
+            deck.drawCard();
+        }
 
         assertEquals(0, deck.size());
 

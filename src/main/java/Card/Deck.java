@@ -2,10 +2,11 @@ package Card;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 
 public class Deck {
 
-    private ArrayList<Card> deck =new ArrayList<>();
+    private List<Card> deck = new ArrayList<>();
 
     public Deck(){
         createDeck();
@@ -43,5 +44,9 @@ public class Deck {
 
     public int size(){
         return deck.size();
+    }
+
+    public List<Card> getDeck() {
+        return deck;
     }
 }

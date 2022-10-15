@@ -37,4 +37,8 @@ public class Deck {
     public String toString() {
         return deck.toString();
     }
+
+    public ArrayList<Card> getDeck() {
+        return deck;
+    }
 }

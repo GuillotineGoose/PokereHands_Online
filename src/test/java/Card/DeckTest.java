@@ -15,9 +15,10 @@ public class DeckTest {
 
     @Test
     public void drawACard(){
-        Card testCard = deck.drawCard();
-        Card drawnCard = deck.drawCard();
-        assertEquals(testCard.getRank(), drawnCard.getRank());
+        var orgSize = deck.getDeck().size();
+        deck.drawCard();
+
+        assertEquals(orgSize - 1, deck.getDeck().size());
     }
 
     /*@Test void drawWholeDeck(){

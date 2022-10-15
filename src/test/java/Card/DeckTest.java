@@ -24,10 +24,11 @@ public class DeckTest {
 
     @Test
     public void shuffle(){
-        var orgDeck = deck;
+        String previousDeck = deck.toString();
+        assertEquals(previousDeck, deck.toString());
+        deck.shuffle();
 
-
-        assertNotEquals(orgDeck, deck);
+        assertNotEquals(previousDeck, deck.toString());
     }
 
 

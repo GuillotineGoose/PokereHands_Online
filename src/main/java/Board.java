@@ -12,7 +12,6 @@ public class Board {
     //initializes the Board class
     public Board(){
         whitePlayer = new PokerHand();
-
         blackPlayer = new PokerHand();
 
         deck = new Deck();

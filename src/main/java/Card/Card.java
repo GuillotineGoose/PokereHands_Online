@@ -1,15 +1,15 @@
 package Card;
 
 public class Card {
-    private int rank;
+    private Rank rank;
     private char suit;
-    public Card(int rank, char suit) {
+    public Card(Rank rank, char suit) {
         this.suit = suit;
         this.rank = rank;
     }
 
     public int getRank() {
-        return rank;
+        return rank.ordinal();
     }
 
     public char getSuit() {

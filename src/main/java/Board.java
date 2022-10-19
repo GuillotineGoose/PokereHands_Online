@@ -11,6 +11,10 @@ public class Board {
 
     private int pot; //Winner pot
 
+
+    //Find way to keep track of Dealer, Small and big blind
+
+    //Index of dealer, i + 1 = small blind, i + 2 = big blind
     //Takes inn list of players then starts the game
     public Board(List<PokerHand> players) {
         this.players = players;

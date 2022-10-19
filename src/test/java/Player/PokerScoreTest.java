@@ -23,7 +23,9 @@ class PokerScoreTest {
         player.addCard(new Card(Rank.K, Suit.HEARTS));
         player.addCard(new Card(Rank.A, Suit.CLUBS));
 
-        assertEquals(PokerHands.HIGH_CARD, player.getScore());
+        player.setScore();
+
+        assertEquals(Score.HIGH_CARD, player.getScore());
         assertEquals(Rank.K, player.getHighCard());
 
 

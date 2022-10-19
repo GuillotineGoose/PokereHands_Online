@@ -1,17 +1,10 @@
 import Card.Deck;
+import Card.Rank;
 
 public class Main {
     public static void main(String[] args) {
-        var deck = new Deck();
+        var card = Rank.TWO;
 
-        System.out.println(deck);
-
-        System.out.println(deck.drawCard());
-        System.out.println(deck);
-        System.out.println(deck.drawCard());
-        System.out.println(deck);
-        System.out.println(deck.drawCard());
-        System.out.println(deck);
-
+        System.out.println(card.ordinal());
     }
 }

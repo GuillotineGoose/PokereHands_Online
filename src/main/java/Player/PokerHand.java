@@ -1,6 +1,6 @@
 package Player;
 
-public enum Score {
+public enum PokerHand {
     HIGH_CARD,
     ONE_PAIR,
     TWO_PAIR,

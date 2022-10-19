@@ -7,16 +7,14 @@ import java.util.List;
 import java.util.Objects;
 
 public class Hand {
-    List<Card> hand; //This will be the two cards unique to the player
+    List<Card> hand;
+    int score; //Not sure what type jet
+
+    int totalMoney; //How much money the player has in total
+    int bet; //Not shure if it's nessesary but can be handy
 
 
-    public Hand(){
-        hand = new ArrayList<>();
-    }
 
-    public void addCard(Card card){
-        hand.add(card);
-    }
 
 
 

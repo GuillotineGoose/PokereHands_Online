@@ -1,13 +1,10 @@
 package Player;
 
-import Card.Card;
-
-import java.util.List;
+import Card.*;
 
 public class PokerScore {
+    private PokerHand hand;
+    private Rank highCard;
 
 
-    public Score checkHighCard(){
-
-    }
 }

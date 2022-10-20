@@ -47,7 +47,6 @@ public class Board {
 
         for (int i = 0; i < players.size() * 2; i++){
             var card = deck.drawCard();
-            System.out.println(i);
             if (i >= players.size())
                 players.get(i - players.size()).addCard(card);
             else
@@ -59,16 +58,8 @@ public class Board {
         //Place bets
         //------------------------------------------------------
 
-        var playerTurn = setStartPlayer();
-
-        while (true){
-            //Player trun, fold call or raise
-            //Next player
-            var currentPlayer = players.get(playerTurn);
-
-
-            //When all players have called or folded the loop is over
-        }
+        System.out.println(setStartPlayer());
+        System.out.println(players.get(setStartPlayer()).getHand());
 
 
 

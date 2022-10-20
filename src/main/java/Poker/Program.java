@@ -1,12 +1,18 @@
-import Card.Deck;
-import Card.Rank;
-import Player.PokerHand;
+package Poker;
+
+import Poker.PokerHand;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Main {
+public class Program {
+
+    //Handle player input
+    private Scanner input;
+
+
+    //Run game
     public static void main(String[] args) {
         var input = new Scanner(System.in);
 
@@ -25,9 +31,15 @@ public class Main {
 
 
         var board = new Board(playerList);
-        board.start();
 
-        System.out.println(p5.getHand());
+        for (var player :playerList){
+            System.out.println(player.getHand());
+            System.out.println(player.getBet());
+            System.out.println(player.haveFolded());
+            System.out.println();
+        }
+
+        board.firstRound(input);
 
 
     }

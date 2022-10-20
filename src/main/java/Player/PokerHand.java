@@ -3,9 +3,7 @@ package Player;
 import Card.*;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 public class PokerHand {
 
@@ -22,11 +20,26 @@ public class PokerHand {
         folded = false;
     }
 
-    public void playerDessicion(){
+    public void playerCallOptions(String option){
+        switch (option){
+            case "f":
+                //Player folds
+                fold();
+                break;
+            case "c":
+                //Player calls
+                call();
+                break;
+            case "r":
+                //Player raises
+                raise();
+                break;
+        }
 
     }
 
     private void fold(){
+        setFolded(true);
 
     }
     //Calls new bet. If player raise by 5, call is adding 5 to bet

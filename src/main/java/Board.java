@@ -2,6 +2,7 @@ import Card.*;
 import Player.PokerHand;
 
 import java.util.List;
+import java.util.Random;
 
 public class Board {
     private Deck deck;
@@ -10,6 +11,9 @@ public class Board {
     private List<Card> board; //Cards on the board
 
     private int pot; //Winner pot
+
+
+    private int dealerIndex;
 
 
     //Find way to keep track of Dealer, Small and big blind
@@ -22,7 +26,23 @@ public class Board {
 
     }
 
-    private void start(){
+
+
+    public void start(){
+        //Dealer picked at random
+        dealerIndex = new Random().nextInt(players.size());
+
+        var smallBlind = setSmallBlind();
+        var bigBlind = setBigBlind();
+
+        //______________________
+        System.out.println(dealerIndex);
+        System.out.println(smallBlind);
+
+        System.out.println(bigBlind);
+        //______________________
+
+
         /*
         * Dealer butten
         * Left of dealer (Small Blind) - Adds 5
@@ -70,5 +90,24 @@ public class Board {
         *
         * */
 
+    }
+
+    private int setSmallBlind(){
+        var smallBlind = dealerIndex + 1;
+
+        if (smallBlind >= players.size()){
+            smallBlind = smallBlind - players.size();
+        }
+
+        return smallBlind;
+    }
+    private int setBigBlind(){
+        var smallBlind = dealerIndex + 2;
+
+        if (smallBlind >= players.size()){
+            smallBlind = smallBlind - players.size();
+        }
+
+        return smallBlind;
     }
 }

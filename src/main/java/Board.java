@@ -30,18 +30,49 @@ public class Board {
 
     public void start(){
         //Dealer picked at random
+        //Set dealer, smallBlind and BigBlind
+        //------------------------------------------------------
         dealerIndex = new Random().nextInt(players.size());
 
         var smallBlind = setSmallBlind();
         var bigBlind = setBigBlind();
+        //------------------------------------------------------
 
-        //______________________
-        System.out.println(dealerIndex);
-        System.out.println(smallBlind);
+        //Make smal and Bigblind bet
+        players.get(smallBlind).placeBet(5);
+        players.get(bigBlind).placeBet(10);
 
-        System.out.println(bigBlind);
-        //______________________
+        //Deal out Cards
+        //------------------------------------------------------
 
+        for (int i = 0; i < players.size() * 2; i++){
+            var card = deck.drawCard();
+            System.out.println(i);
+            if (i >= players.size())
+                players.get(i - players.size()).addCard(card);
+            else
+                players.get(i).addCard(card);
+        }
+        //------------------------------------------------------
+
+
+        //Place bets
+        //------------------------------------------------------
+
+        var playerTurn = setStartPlayer();
+
+        while (true){
+            //Player trun, fold call or raise
+            //Next player
+            var currentPlayer = players.get(playerTurn);
+
+
+            //When all players have called or folded the loop is over
+        }
+
+
+
+        //------------------------------------------------------
 
         /*
         * Dealer butten
@@ -103,6 +134,15 @@ public class Board {
     }
     private int setBigBlind(){
         var smallBlind = dealerIndex + 2;
+
+        if (smallBlind >= players.size()){
+            smallBlind = smallBlind - players.size();
+        }
+
+        return smallBlind;
+    }
+    private int setStartPlayer(){
+        var smallBlind = dealerIndex + 3;
 
         if (smallBlind >= players.size()){
             smallBlind = smallBlind - players.size();

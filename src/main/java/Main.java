@@ -22,8 +22,9 @@ public class Main {
 
 
         var board = new Board(playerList);
-
         board.start();
+
+        System.out.println(p5.getMoney());
 
 
     }
